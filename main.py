@@ -30,8 +30,8 @@ cook_book = {
 cook_book1 = {}
 
 def create_cook_book_from_file (filename="data01.txt"):
-  with open("data01.txt", encoding= "utf-8") as file:
-    for line in file:
+  with open("data01.txt", encoding= "utf-8") as f:
+    for line in f:
       dish_name = line(strip()
       ingridient_count = int(readline())
       while i < ingridient_count:
@@ -40,7 +40,7 @@ def create_cook_book_from_file (filename="data01.txt"):
         ingridient_list.append([{'ingridient_name': ingridients_splitted[0]}, {'quantity': ingridients_splitted[1]}, {'measure': ingridients_splitted[2]}]}
         i+=1
         cook_book1.update({dish_name: ingridient_list})
-     file.readline()
+     f.readline()
   return True
 
 def get_shop_list_by_dishes(dishes, person_count):
